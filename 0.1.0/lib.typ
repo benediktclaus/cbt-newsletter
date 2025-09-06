@@ -206,12 +206,9 @@
   )
 
   #v(1fr)
-  #outline(target: heading.where(level: 1))
+  #outline(target: heading.where(level: 1), title: "Inhalt")
   #v(1fr)
 
   #pagebreak()
   #body
-
-  // #pagebreak()
-  #bibliography("references.bib", title: "Literatur", style: "apa")
 ]
