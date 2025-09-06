@@ -10,7 +10,7 @@
       introduction
       v(1.4em)
     },
-    sticky: true
+    sticky: true,
   )
 }
 
@@ -55,16 +55,15 @@
 // Person of the month
 #let person-of-the-month(name: none, picture: none, quote: none) = {
   align(center, block(
-    fill: light-blue,
-    height: 7cm,
+    fill: bright-yellow,
+    height: 8cm,
     width: 90%,
     grid(
-      columns: 2,
-      align: horizon + center,
+      columns: (2.5fr, 1fr),
+      align: center + horizon,
       inset: (x, _) => if x == 0 { (left: 10mm, right: 10mm) } else { 0mm },
       [
-        #text(style: "italic", quote)
-
+        #text(style: "italic", quote, weight: "semibold")
         #align(right)[--- #name]
       ],
       picture,
@@ -199,7 +198,7 @@
   #block(
     height: intro-height,
     grid(
-      columns: 2,
+      columns: (2fr, 1fr),
       column-gutter: 2em,
       intro, intro-image,
     ),
