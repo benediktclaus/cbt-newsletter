@@ -2,3 +2,10 @@
 name = "cbt-newsletter"
 version = "0.1.0"
 entrypoint = "lib.typ"
+authors = ["Benedikt Claus"]
+license = "MIT"
+description = "CBT newsletter package"
+
+[template]
+path = "template"
+entrypoint = "main.typ"
