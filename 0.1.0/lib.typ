@@ -54,21 +54,24 @@
 
 // Person of the month
 #let person-of-the-month(name: none, picture: none, quote: none) = {
-  align(center, block(
-    fill: bright-yellow,
-    height: 8cm,
-    width: 90%,
-    grid(
-      columns: (2.5fr, 1fr),
-      align: center + horizon,
-      inset: (x, _) => if x == 0 { (left: 10mm, right: 10mm) } else { 0mm },
-      [
-        #text(style: "italic", quote, weight: "semibold")
-        #align(right)[--- #name]
-      ],
-      picture,
+  align(
+    center,
+    block(
+      fill: bright-yellow,
+      height: 6cm,
+      width: 90%,
+      grid(
+        columns: (2.5fr, 1fr),
+        align: center + horizon,
+        inset: (x, _) => if x == 0 { (left: 10mm, right: 10mm) } else { 0mm },
+        [
+          #text(style: "italic", quote, weight: "semibold")
+          #align(right)[--- #name]
+        ],
+        picture,
+      ),
     ),
-  ))
+  )
 }
 
 
